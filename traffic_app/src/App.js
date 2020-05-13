@@ -1,26 +1,60 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Menu from './component/Menu'
+import Header from './component/Header'
+import Footer from './component/Footer'
+import Main from './component/Main'
+import Violator from './component/Violator'
+import Logs from './component/Logs'
+import User from './component/User'
+import Login from './component/Login'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+
+export default class App extends Component {
+ constructor(){
+   super();
+   this.state = {
+     route: 'signin',
+   }
+ }
+ onRouteChange = (route) => {
+  this.setState({route: route});
 }
 
-export default App;
+  render() {
+   
+    return (
+  
+
+
+      <div>
+           
+        
+          
+          <div>
+            {
+          this.state.route === 'signin' ?
+          <Login onRouteChange={this.onRouteChange}/> :
+          <div>
+            <Header/>
+        <Menu onRouteChange={this.onRouteChange}/>
+        
+    {         this.state.route === 'DashBoard' ? 
+                <Main/> :
+              (  this.state.route === 'Violator' ? 
+                <Violator /> : this.state.route === 'Logs' ? 
+                <Logs /> : <User />)
+
+        }
+        <Footer/>
+          </div>
+            }
+          </div>
+
+      </div> 
+    )
+      
+    }
+  }
