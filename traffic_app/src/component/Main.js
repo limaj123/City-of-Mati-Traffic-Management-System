@@ -29,48 +29,67 @@ export default class Main extends Component {
             <div>
      <div className="content-wrapper" >
   <section className="content">
-    <div className="row">
-      <div className="col-md-3 col-sm-6 col-xs-12">
-        <div className="info-box">
-          <span className="info-box-icon bg-aqua"><i className="ion ion-ios-gear-outline" /></span>
-          <div className="info-box-content">
-            <span className="info-box-text">Unpaid Violator</span>
-            <span className="info-box-number">90<small>%</small></span>
-          </div>
-          {/* /.info-box-content */}
-        </div>
-        {/* /.info-box */}
+
+
+ <div className="row">
+  <div className="col-lg-3 col-xs-6">
+    {/* small box */}
+    <div className="small-box bg-aqua">
+      <div className="inner">
+        <h3>150</h3>
+        <p>Paid Violators</p>
       </div>
-      {/* /.col */}
-    
-      {/* /.col */}
-      {/* fix for small devices only */}
-      <div className="clearfix visible-sm-block" />
-      <div className="col-md-3 col-sm-6 col-xs-12">
-        <div className="info-box">
-          <span className="info-box-icon bg-green"><i className="ion ion-ios-cart-outline" /></span>
-          <div className="info-box-content">
-            <span className="info-box-text">Paid Violator</span>
-            <span className="info-box-number">760</span>
-          </div>
-          {/* /.info-box-content */}
-        </div>
-        {/* /.info-box */}
+      <div className="icon">
+        <i className=" fa fa-fw fa-money" />
       </div>
-      {/* /.col */}
-      <div className="col-md-3 col-sm-6 col-xs-12">
-        <div className="info-box">
-          <span className="info-box-icon bg-yellow"><i className="ion ion-ios-people-outline" /></span>
-          <div className="info-box-content">
-            <span className="info-box-text">New Violator</span>
-            <span className="info-box-number">2,000</span>
-          </div>
-          {/* /.info-box-content */}
-        </div>
-        {/* /.info-box */}
-      </div>
-      {/* /.col */}
+      <a href="#" className="small-box-footer">More info <i className="fa fa-arrow-circle-right" /></a>
     </div>
+  </div>
+  {/* ./col */}
+  <div className="col-lg-3 col-xs-6">
+    {/* small box */}
+    <div className="small-box bg-green">
+      <div className="inner">
+        <h3>53<sup style={{fontSize: 20}}>%</sup></h3>
+        <p>Paid Rate</p>
+      </div>
+      <div className="icon">
+        <i className="ion ion-stats-bars" />
+      </div>
+      <a href="#" className="small-box-footer">More info <i className="fa fa-arrow-circle-right" /></a>
+    </div>
+  </div>
+  {/* ./col */}
+  <div className="col-lg-3 col-xs-6">
+    {/* small box */}
+    <div className="small-box bg-yellow">
+      <div className="inner">
+        <h3>44</h3>
+        <p>New Violator</p>
+      </div>
+      <div className="icon">
+        <i className="ion ion-person-add" />
+      </div>
+      <a href="#" className="small-box-footer">More info <i className="fa fa-arrow-circle-right" /></a>
+    </div>
+  </div>
+  {/* ./col */}
+  <div className="col-lg-3 col-xs-6">
+    {/* small box */}
+    <div className="small-box bg-red">
+      <div className="inner">
+        <h3>65</h3>
+        <p>Unpaid Violator</p>
+      </div>
+      <div className="icon">
+        <i className="ion ion-pie-graph" />
+      </div>
+      <a href="#" className="small-box-footer">More info <i className="fa fa-arrow-circle-right" /></a>
+    </div>
+  </div>
+  {/* ./col */}
+</div>
+
 
 
     <div className="box">
@@ -115,41 +134,55 @@ export default class Main extends Component {
       </div>
       {/* /.col */}
       <div className="col-md-4">
-        <p className="text-center">
-          <strong>Goal Completion</strong>
-        </p>
-        <div className="progress-group">
-          <span className="progress-text">Add Violator</span>
-          <span className="progress-number"><b>160</b>/200</span>
-          <div className="progress sm">
-            <div className="progress-bar progress-bar-aqua" style={{width: '80%'}} />
+
+  <div className="box-header">
+    <h3 className="box-title"> Black List</h3>
+  </div>
+  {/* /.box-header */}
+  <div className="box-body">
+    <div id="example1_wrapper" className="dataTables_wrapper form-inline dt-bootstrap"><div className="row" style={{display: 'flex',
+    'flex-direction': 'column',
+    'align-items': 'center'}}><div className="col-sm-6">
+  </div><label>Search:<input type="search" className="form-control input-sm" placeholder aria-controls="example1" /></label></div><div className="row"><div className="col-sm-12"><table id="example1" className="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+            <thead>
+              <tr role="row"><th className="sorting_asc" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} aria-sort="ascending" style={{width: '79.4px'}}>ID no.</th>
+              <th className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} style={{width: '101.8px'}}>Name</th>
+              <th className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} style={{width: '88.2px'}}>Date / Time</th>
+              <th className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1}  style={{width: '65.8px'}}>Work Type</th>
+              <th className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1}  style={{width: 42}}>Action</th></tr>
+            </thead>
+            <tbody>
+              <tr role="row" className="even">
+                <td className="sorting_1">001</td>
+                <td >James South</td>
+                <td>02/02/2020-12:00 pm</td>
+                <td>Add User</td>    
+                <td><a>
+                <i class="fa fa-fw fa-info-circle"></i></a></td>
+              </tr>
+              <tr role="row" className="odd">
+                <td className="sorting_1">002</td>
+                <td >William Smith</td>
+                <td>15/03/2020-1:00 pm</td>
+                <td>Update User</td>    
+                <td><a>
+                <i class="fa fa-fw fa-info-circle"></i></a></td>
+              </tr>
+              <tr role="row" className="odd">
+                <td className="sorting_1">002</td>
+                <td >Rick Dou</td>
+                <td>20/03/2020-3:00 pm</td>
+                <td>Payment Update</td>    
+                <td><a>
+                <i class="fa fa-fw fa-info-circle"></i></a></td>
+              </tr>
+              </tbody>
+
+          </table></div></div>
           </div>
-        </div>
-        {/* /.progress-group */}
-        <div className="progress-group">
-          <span className="progress-text">Paid Violator</span>
-          <span className="progress-number"><b>310</b>/400</span>
-          <div className="progress sm">
-            <div className="progress-bar progress-bar-red" style={{width: '80%'}} />
-          </div>
-        </div>
-        {/* /.progress-group */}
-        <div className="progress-group">
-          <span className="progress-text">Unpaid Violator</span>
-          <span className="progress-number"><b>480</b>/800</span>
-          <div className="progress sm">
-            <div className="progress-bar progress-bar-green" style={{width: '80%'}} />
-          </div>
-        </div>
-        {/* /.progress-group */}
-        <div className="progress-group">
-          <span className="progress-text">User Confirmation</span>
-          <span className="progress-number"><b>250</b>/500</span>
-          <div className="progress sm">
-            <div className="progress-bar progress-bar-yellow" style={{width: '80%'}} />
-          </div>
-        </div>
-        {/* /.progress-group */}
+  </div>
+  {/* /.box-body */}
+
       </div>
       {/* /.col */}
     </div>

@@ -3,14 +3,16 @@ import React from 'react'
 const Login = ({onRouteChange}) => {
 
         return (
-            <div style = {{ background:'red'}}>
+            <div >
                     <div className="login-box">
-                    <div className="login-logo">
-                        <a href="../../index2.html"><b>City of Mati Traffic </b>Management System</a>
-                    </div>
+                   
                     {/* /.login-logo */}
-                    <div className="login-box-body" style={{ background:'#d2d6de'}}>
-                        <p className="login-box-msg">Sign in to start your session</p>
+                    <div className="login-box-body" style={{  background:'#3A9EDA', 'border-radius': '29px'}}>
+                    <div className="login-logo" style={{display:'flex',flexDirection:'column', alignItems:'center'}}>
+                        <img alt='Mati' src='/image/mati.png'  style={{height:'200px',width:'200px'}} />
+                        <a href="../../index2.html" style={{color:'White'}}><b>City of Mati Traffic </b>Management System</a>
+                    </div>
+                  
                         <form action="../../index2.html" method="post">
                         <div className="form-group has-feedback">
                             <input type="email" className="form-control" placeholder="Username" />
@@ -20,13 +22,12 @@ const Login = ({onRouteChange}) => {
                             <input type="password" className="form-control" placeholder="Password" />
                             <span className="fa fa-fw fa-unlock-alt form-control-feedback" />
                         </div>
-                        <div className="row">
+                        <div className="row" style={{    display: 'flex','flex-direction':'column', alignItems: 'center'}}>
                             <div className="col-xs-8">
-                         
                             </div>
                             {/* /.col */}
-                            <div className="col-xs-4" style={{    display: 'flex', alignItems: 'center'}}>
-                            <button onClick = {() => onRouteChange('DashBoard')} className="btn btn-primary btn-block btn-flat">Sign In</button>
+                            <div className="col-xs-4" >
+                            <button onClick = {() => onRouteChange('DashBoard')} className="btn btn-block btn-info btn-lg" >Sign In</button>
                             </div>
                             {/* /.col */}
                         </div>
