@@ -1,8 +1,0 @@
-{
-    "Users" :[
-        {"id":"001","name":"John Drew","position":"traffic Offcer","approve":"false","username":"John001","password":"21312"} ,
-        {"id":"002","name":"Micheal Rode","position":"traffic Offcer","approve":"true","username":"Micheal002","password":"21312"},
-        {"id":"003","name":"Mark Sander","position":"traffic Offcer","approve":"true","username":"Mark003","password":"21312"},
-        {"id":"003","name":"James Sou","position":"Admin","approve":"false","username":"James003","password":"21312"}
-    ]
-}

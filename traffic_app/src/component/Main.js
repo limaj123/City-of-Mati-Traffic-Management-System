@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
-import Violator from './Violator';
+
 
 export default class Main extends Component {
     constructor(props){
@@ -79,7 +79,7 @@ export default class Main extends Component {
     <div className="small-box bg-red">
       <div className="inner">
         <h3>65</h3>
-        <p>Unpaid Violator</p>
+        <p>Unpaid Violator</p>  
       </div>
       <div className="icon">
         <i className="ion ion-pie-graph" />
@@ -136,45 +136,47 @@ export default class Main extends Component {
       <div className="col-md-4">
 
   <div className="box-header">
-    <h3 className="box-title"> Black List</h3>
+  <p className="text-center"><strong>Black listed</strong></p>
   </div>
   {/* /.box-header */}
   <div className="box-body">
     <div id="example1_wrapper" className="dataTables_wrapper form-inline dt-bootstrap"><div className="row" style={{display: 'flex',
-    'flex-direction': 'column',
-    'align-items': 'center'}}><div className="col-sm-6">
-  </div><label>Search:<input type="search" className="form-control input-sm" placeholder aria-controls="example1" /></label></div><div className="row"><div className="col-sm-12"><table id="example1" className="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+    flexDirection: 'column',
+    alignItems: 'center'}}><div className="col-sm-6">
+  </div><label>Search:<input type="search" className="form-control input-sm"  aria-controls="example1" /></label></div><div className="row"><div className="col-sm-12"><table id="example1" className="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
             <thead>
               <tr role="row"><th className="sorting_asc" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} aria-sort="ascending" style={{width: '79.4px'}}>ID no.</th>
               <th className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} style={{width: '101.8px'}}>Name</th>
-              <th className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} style={{width: '88.2px'}}>Date / Time</th>
-              <th className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1}  style={{width: '65.8px'}}>Work Type</th>
+              <th className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} style={{width: '88.2px'}}>Apprehend</th>
               <th className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1}  style={{width: 42}}>Action</th></tr>
             </thead>
             <tbody>
               <tr role="row" className="even">
                 <td className="sorting_1">001</td>
                 <td >James South</td>
-                <td>02/02/2020-12:00 pm</td>
-                <td>Add User</td>    
+                <td>3</td>    
                 <td><a>
-                <i class="fa fa-fw fa-info-circle"></i></a></td>
+                <i className="fa fa-fw fa-info-circle"></i>
+                <i className="fa fa-fw fa-close"></i></a></td>
               </tr>
               <tr role="row" className="odd">
                 <td className="sorting_1">002</td>
                 <td >William Smith</td>
-                <td>15/03/2020-1:00 pm</td>
-                <td>Update User</td>    
+                <td>2</td>    
                 <td><a>
-                <i class="fa fa-fw fa-info-circle"></i></a></td>
+                <i className="fa fa-fw fa-info-circle"></i>
+                <i className="fa fa-fw fa-close"></i>
+                </a>
+                </td>
               </tr>
               <tr role="row" className="odd">
                 <td className="sorting_1">002</td>
                 <td >Rick Dou</td>
-                <td>20/03/2020-3:00 pm</td>
-                <td>Payment Update</td>    
+                <td>3</td>    
                 <td><a>
-                <i class="fa fa-fw fa-info-circle"></i></a></td>
+                <i className="fa fa-fw fa-info-circle"></i>
+                <i className="fa fa-fw fa-close"></i>
+                </a></td>
               </tr>
               </tbody>
 
@@ -194,7 +196,7 @@ export default class Main extends Component {
       <div className="col-sm-3 col-xs-6">
         <div className="description-block border-right">
           <span className="description-percentage text-green"><i className="fa fa-caret-up" /> 17%</span>
-          <h5 className="description-header">$35,210.43</h5>
+          <h5 className="description-header">₱35,210.43</h5>
           <span className="description-text">TOTAL REVENUE</span>
         </div>
         {/* /.description-block */}
@@ -203,7 +205,7 @@ export default class Main extends Component {
       <div className="col-sm-3 col-xs-6">
         <div className="description-block border-right">
           <span className="description-percentage text-yellow"><i className="fa fa-caret-left" /> 0%</span>
-          <h5 className="description-header">$10,390.90</h5>
+          <h5 className="description-header">₱10,390.90</h5>
           <span className="description-text">TOTAL COST</span>
         </div>
         {/* /.description-block */}
@@ -212,7 +214,7 @@ export default class Main extends Component {
       <div className="col-sm-3 col-xs-6">
         <div className="description-block border-right">
           <span className="description-percentage text-green"><i className="fa fa-caret-up" /> 20%</span>
-          <h5 className="description-header">$24,813.53</h5>
+          <h5 className="description-header">₱24,813.53</h5>
           <span className="description-text">TOTAL PROFIT</span>
         </div>
         {/* /.description-block */}
@@ -221,7 +223,7 @@ export default class Main extends Component {
       <div className="col-sm-3 col-xs-6">
         <div className="description-block">
           <span className="description-percentage text-red"><i className="fa fa-caret-down" /> 18%</span>
-          <h5 className="description-header">1200</h5>
+          <h5 className="description-header">₱1200</h5>
           <span className="description-text">GOAL COMPLETIONS</span>
         </div>
         {/* /.description-block */}
@@ -238,7 +240,7 @@ export default class Main extends Component {
   </div>
   {/* /.box-header */}
   <div className="box-body">
-    <div id="example1_wrapper" className="dataTables_wrapper form-inline dt-bootstrap"><div className="row"><div className="col-sm-6"><div className="dataTables_length" id="example1_length"><label>Show <select name="example1_length" aria-controls="example1" className="form-control input-sm"><option value={10}>10</option><option value={25}>25</option><option value={50}>50</option><option value={100}>100</option></select> entries</label></div></div><div className="col-sm-6"><div id="example1_filter" className="dataTables_filter"><label>Search:<input type="search" className="form-control input-sm" placeholder aria-controls="example1" /></label></div></div></div><div className="row"><div className="col-sm-12"><table id="example1" className="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+    <div id="example1_wrapper" className="dataTables_wrapper form-inline dt-bootstrap"><div className="row"><div className="col-sm-6"><div className="dataTables_length" id="example1_length"><label>Show <select name="example1_length" aria-controls="example1" className="form-control input-sm"><option value={10}>10</option><option value={25}>25</option><option value={50}>50</option><option value={100}>100</option></select> entries</label></div></div><div className="col-sm-6"><div id="example1_filter" className="dataTables_filter"><label>Search:<input type="search" className="form-control input-sm"  aria-controls="example1" /></label></div></div></div><div className="row"><div className="col-sm-12"><table id="example1" className="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
             <thead>
               <tr role="row"><th className="sorting_asc" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} aria-sort="ascending" style={{width: '79.4px'}}>ID no.</th>
               <th className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} style={{width: '101.8px'}}>Name</th>
@@ -253,7 +255,7 @@ export default class Main extends Component {
                 <td>02/02/2020-12:00 pm</td>
                 <td>Add User</td>    
                 <td><a>
-                <i class="fa fa-fw fa-info-circle"></i></a></td>
+                <i className="fa fa-fw fa-info-circle"></i></a></td>
               </tr>
               <tr role="row" className="odd">
                 <td className="sorting_1">002</td>
@@ -261,7 +263,7 @@ export default class Main extends Component {
                 <td>15/03/2020-1:00 pm</td>
                 <td>Update User</td>    
                 <td><a>
-                <i class="fa fa-fw fa-info-circle"></i></a></td>
+                <i className="fa fa-fw fa-info-circle"></i></a></td>
               </tr>
               <tr role="row" className="odd">
                 <td className="sorting_1">002</td>
@@ -269,7 +271,7 @@ export default class Main extends Component {
                 <td>20/03/2020-3:00 pm</td>
                 <td>Payment Update</td>    
                 <td><a>
-                <i class="fa fa-fw fa-info-circle"></i></a></td>
+                <i className="fa fa-fw fa-info-circle"></i></a></td>
               </tr>
               </tbody>
 

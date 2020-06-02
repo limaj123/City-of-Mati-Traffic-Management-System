@@ -12,7 +12,7 @@ const Logs = ({onRouteChange}) => {
   </div>
   {/* /.box-header */}
   <div className="box-body">
-    <div id="example1_wrapper" className="dataTables_wrapper form-inline dt-bootstrap"><div className="row"><div className="col-sm-6"><div className="dataTables_length" id="example1_length"><label>Show <select name="example1_length" aria-controls="example1" className="form-control input-sm"><option value={10}>10</option><option value={25}>25</option><option value={50}>50</option><option value={100}>100</option></select> entries</label></div></div><div className="col-sm-6"><div id="example1_filter" className="dataTables_filter"><label>Search:<input type="search" className="form-control input-sm" placeholder aria-controls="example1" /></label></div></div></div><div className="row"><div className="col-sm-12"><table id="example1" className="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+    <div id="example1_wrapper" className="dataTables_wrapper form-inline dt-bootstrap"><div className="row"><div className="col-sm-6"><div className="dataTables_length" id="example1_length"><label>Show <select name="example1_length" aria-controls="example1" className="form-control input-sm"><option value={10}>10</option><option value={25}>25</option><option value={50}>50</option><option value={100}>100</option></select> entries</label></div></div><div className="col-sm-6"><div id="example1_filter" className="dataTables_filter"><label>Search:<input type="search" className="form-control input-sm"  aria-controls="example1" /></label></div></div></div><div className="row"><div className="col-sm-12"><table id="example1" className="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
             <thead>
               <tr role="row"><th className="sorting_asc" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} aria-sort="ascending" style={{width: '79.4px'}}>ID no.</th>
               <th className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} style={{width: '101.8px'}}>Name</th>
@@ -27,7 +27,7 @@ const Logs = ({onRouteChange}) => {
                 <td>02/02/2020-12:00 pm</td>
                 <td>Add User</td>    
                 <td><a>
-                <i class="fa fa-fw fa-info-circle"></i></a></td>
+                <i className="fa fa-fw fa-info-circle"></i></a></td>
               </tr>
               <tr role="row" className="odd">
                 <td className="sorting_1">002</td>
@@ -35,7 +35,7 @@ const Logs = ({onRouteChange}) => {
                 <td>15/03/2020-1:00 pm</td>
                 <td>Update User</td>    
                 <td><a>
-                <i class="fa fa-fw fa-info-circle"></i></a></td>
+                <i className="fa fa-fw fa-info-circle"></i></a></td>
               </tr>
               <tr role="row" className="odd">
                 <td className="sorting_1">002</td>
@@ -43,7 +43,7 @@ const Logs = ({onRouteChange}) => {
                 <td>20/03/2020-3:00 pm</td>
                 <td>Payment Update</td>    
                 <td><a>
-                <i class="fa fa-fw fa-info-circle"></i></a></td>
+                <i className="fa fa-fw fa-info-circle"></i></a></td>
               </tr>
               </tbody>
 

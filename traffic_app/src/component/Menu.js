@@ -13,7 +13,7 @@ const Menu = ({ onRouteChange }) => {
         <img src="dist/img/user2-160x160.jpg" className="img-circle" alt="User" />
       </div>
       <div className="pull-left info">
-        <p>Alexander Pierce</p>
+        <p>Atty. Al Aquino</p>
         <a href="fake_url"><i className="fa fa-circle text-success" /> Online</a>
       </div>
     </div>
