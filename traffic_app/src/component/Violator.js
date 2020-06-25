@@ -3,6 +3,8 @@ import Modal from './Modal';
 import moment from 'moment';
 import jsPDF from 'jspdf'
 import autoTable from 'jspdf-autotable'
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
+import '../index.css';
 class Violator extends Component {
 
   state = {
@@ -94,8 +96,15 @@ render() {
             <i className="fa fa-user-plus"></i> Add Violator
               </a>
               <a className="btn btn-block btn-info btn-lg" onClick={this.generatePDF} style={{ maxWidth: '15%', marginBottom: '10px' }}>
-            <i className="fa fa-fw fa-print"></i> Print
+            <i className="fa fa-fw fa-print"></i> Download as PDF
               </a>
+              <ReactHTMLTableToExcel
+                    id="test-table-xls-button"
+                    className="btn btn-block btn-info btn-lg btn-size"
+                    table="example1"
+                    filename="tablexls"
+                    sheet="tablexls"
+                    buttonText="Download as XLS"/>
          </div>
 
           <div className="box" >
@@ -104,29 +113,31 @@ render() {
             </div>
             {/* /.box-header */}
 
-            <div className="box-body" style={{overflow:'auto' }}>
+            <div className="box-body" style={{overflow:'auto', height:'600px'}}>
               <div id="example1_wrapper" className="dataTables_wrapper form-inline dt-bootstrap"><div className="row"><div className="col-sm-6">
                 <div className="dataTables_length" id="example1_length"><label>Show <select name="example1_length" aria-controls="example1" className="form-control input-sm"  value={this.state.onViewChange} onChange={this.onViewChange}><option value={''}>all</option><option value={'Paid'}>Paid</option><option value={'Unpaid'}>Unpaid</option></select> entries</label></div></div><div className="col-sm-6">
                 <div ><label>Search:<input type="search" className="form-control input-sm"  aria-controls="example1" onChange={this.onSearchChange} /></label></div></div></div><div className="row"><div className="col-sm-12">
+               
+               
                 <table id="example1" className="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info" style={{tableLayout:'fixed'}}>
                 
                 <thead>
     
                   <tr role="row"><th className="sorting_asc" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style={{ width: '79.4px' }}> TCT No.</th>
 
-                    <th style={{ width: '100px'}} className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} >Name</th>
-                    <th style={{ width: '100px'}} className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} >Driver's Address</th>  
-                    <th style={{ width: '100px'}} className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} >Plate No.</th>
-                    <th style={{ width: '100px'}} className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} >Make of Vehicle</th>
-                    <th style={{ width: '100px'}} className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} >Type of Vehicle</th>
-                    <th style={{ width: '100px'}} className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} >Registered Owner</th>
-                    <th style={{ width: '100px'}} className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} >Owner's Address</th>
-                    <th style={{ width: '100px'}} className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} >Violation(s)</th>
-                    <th style={{ width: '100px'}} className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} >Traffic Officer</th>
-                    <th style={{ width: '100px'}} className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} > Date/ Time of Apprehetion</th>
-                    <th style={{ width: '100px'}} className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} > Place of Apprehension</th>
-                    <th style={{ width: '100px'}} className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} > Payment</th>
-                    <th style={{ width: '100px'}} className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} >Action</th></tr>
+                    <th  className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} >Name</th>
+                    <th  className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} >Driver's Address</th>  
+                    <th  className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} >Plate No.</th>
+                    <th  className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} >Make of Vehicle</th>
+                    <th  className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} >Type of Vehicle</th>
+                    <th  className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} >Registered Owner</th>
+                    <th  className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} >Owner's Address</th>
+                    <th  className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} >Violation(s)</th>
+                    <th  className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} >Traffic Officer</th>
+                    <th  className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} > Date/ Time of Apprehetion</th>
+                    <th  className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} > Place of Apprehension</th>
+                    <th  className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} > Payment</th>
+                    <th  className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} >Action</th></tr>
                 </thead>
                 <tbody>
                  {
@@ -140,9 +151,9 @@ render() {
                         <td>{item.TypeofVehicle}</td>
                         <td>{item.RegisteredOwner}</td>
                         <td>{item.AddressOwner}</td>
-                        <td style={{ width: '100px', overflow:'auto' ,wordBreak:'break-word'}}>{item.Violation}</td>
+                        <td style={{ width: '150px', overflow:'auto' }}>{item.Violation}</td>
                         <td>{item.ViolatorOfficer}</td>
-                        <td>{moment(item.startDate).format('MMMM d, yyyy h:mm a')}</td>
+                        <td>{moment(item.startDate).format('MMMM d, yyyy')}</td>
                         <td>{item.PlaceofApprehension}</td>
                         <td>{item.Payment}</td>
                         <td style={{ display: 'flex' }}>  <a onClick={() => this.addUpdate('addupdate',index)}><i className="fa fa-fw fa-pencil-square"></i></a><a onClick={() => this.paymentUpdate('payment',index)}><i className="fa fa-fw fa-money"></i></a></td>
@@ -152,7 +163,10 @@ render() {
                     	  
                   }
                 </tbody>
-              </table></div></div><div className="row"><div className="col-sm-5"><div className="dataTables_info" id="example1_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div className="col-sm-7"><div className="dataTables_paginate paging_simple_numbers" id="example1_paginate"><ul className="pagination"><li className="paginate_button previous disabled" id="example1_previous"><a href="#" aria-controls="example1" data-dt-idx={0} tabIndex={0}>Previous</a></li><li className="paginate_button active"><a href="#" aria-controls="example1" data-dt-idx={1} tabIndex={0}>1</a></li><li className="paginate_button "><a href="#" aria-controls="example1" data-dt-idx={2} tabIndex={0}>2</a></li><li className="paginate_button "><a href="#" aria-controls="example1" data-dt-idx={3} tabIndex={0}>3</a></li><li className="paginate_button "><a href="#" aria-controls="example1" data-dt-idx={4} tabIndex={0}>4</a></li><li className="paginate_button "><a href="#" aria-controls="example1" data-dt-idx={5} tabIndex={0}>5</a></li><li className="paginate_button "><a href="#" aria-controls="example1" data-dt-idx={6} tabIndex={0}>6</a></li><li className="paginate_button next" id="example1_next"><a href="#" aria-controls="example1" data-dt-idx={7} tabIndex={0}>Next</a></li></ul></div></div></div></div>
+              </table>
+              
+              
+              </div></div></div>
             </div>
             {/* /.box-body */}
           </div>

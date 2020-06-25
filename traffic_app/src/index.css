@@ -11,3 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.btn-size{
+  max-width: 15%;
+   margin-bottom: 10px;
+}

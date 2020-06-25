@@ -20,6 +20,29 @@ class Modal extends Component {
                 AddressOwner: '',
                 ViolatorOfficer: '',
                 Violation: '',
+
+                InvalidDL:false,
+                DelinquentInvalidRegistration:false,
+                NoCrashHelmet:false,
+                BackRiderNoHelmet:false,
+                FailureToCarryORCR:false,
+                FailureToFastenSeatBelt :false,
+                CounterFlow:false,
+                BoraBora:false,
+                ExpiredORCRNoORCR:false,
+                ExceedingRegisteredCapacity:false,
+                NoExpiredMTO:false,
+                OtherTrafficViolation:false,
+                WearingOfSandoShortsSlippers:false,
+                DisregardingTrafficSign:false,
+                TruckBan:false,
+                NoCanvassCover:false,
+                Noplateattach:false,	
+                NoparkingZone:false,
+                IllegalTerminal:false,
+                NoUTURN:false,
+
+                
                 Overspeeding: false,
                 NoOvertaking: false,
                 NOleftTurn: false,
@@ -131,7 +154,6 @@ class Modal extends Component {
                                         <div>
                                             <p>Violations : {this.state.Violation}</p>
                                             <p>Count:{this.state.apprehensionCount}</p>
-                                            <p>totoal Payment: ₱ {this.state.apprehensionCount * 50}</p>'
                                     <select className="form-control" value={this.state.Payment} onChange={this.paymentChange}>
                                                 <option value='Unpaid'> Unpaid</option>
                                                 <option value='Paid'> Paid</option>
@@ -220,7 +242,7 @@ class Modal extends Component {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="box-body" style={{ padding: '0' }}>
+                                            <div className="box-body" style={{ padding: '0' ,height:'300px',overflow:'auto' }}>
                                                 <div className="form-group" style={{ display: 'flex', flexDirection: 'column', marginBottom: '0' }}>
                                                     <label htmlFor="">Violation(s)</label>
                                                     <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly' }}>
@@ -286,7 +308,54 @@ class Modal extends Component {
                                       Unregister Vihicle
                                         </label>
                                                                 </div>
+                                                                
+                        
+                                                                <div className="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" name='DisregardingTrafficOfficer' checked={this.state.DisregardingTrafficOfficer} onChange={this.checkboxChange} value={this.state.DisregardingTrafficOfficer} />
+                                                                        Disregarding Traffic Officer
+                                        </label>
+                                                                </div>
+                                                                
 
+                                                                <div className="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" name='TruckBan' checked={this.state.TruckBan} onChange={this.checkboxChange} value={this.state.TruckBan} />
+                                                                        Truck Ban
+                                        </label>
+                                                                </div>
+                                                                <div className="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" name='NoCanvassCover' checked={this.state.NoCanvassCover} onChange={this.checkboxChange} value={this.state.NoCanvassCover} />
+                                                                        No Canvass Cover
+                                        </label>
+                                                                </div>
+                                                                <div className="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" name='Noplateattach' checked={this.state.Noplateattach} onChange={this.checkboxChange} value={this.state.Noplateattach} />
+                                                                        No plate attach
+                                        </label>
+                                                                </div>
+                                                                 
+                                                                <div className="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" name='NoparkingZone' checked={this.state.NoparkingZone} onChange={this.checkboxChange} value={this.state.NoparkingZone} />
+                                                                        No parking Zone
+                                        </label>
+                                                                </div>
+                                                                <div className="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" name='IllegalTerminal' checked={this.state.IllegalTerminal} onChange={this.checkboxChange} value={this.state.IllegalTerminal} />
+                                                                        Illegal Terminal
+                                        </label>
+                                                                </div>
+                                                                <div className="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" name='NoUTURN' checked={this.state.NoUTURN} onChange={this.checkboxChange} value={this.state.NoUTURN} />
+                                                                        No U-TURN
+                                        </label>
+                                                                </div>
+                
 
                                                             </div>
 
@@ -351,9 +420,63 @@ class Modal extends Component {
                                         </label>
 
                                                                 </div>
+                                                                <div className="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" name='CounterFlow' checked={this.state.CounterFlow} onChange={this.checkboxChange} value={this.state.CounterFlow
+                                                                        } />
+                                 Counter Flow
+                                        </label>
 
+                                                                </div>
+                                                                <div className="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" name='BoraBora' checked={this.state.BoraBora} onChange={this.checkboxChange} value={this.state.BoraBora
+                                                                        } />
+                                 Bora Bora
+                                        </label>
+
+                                                                </div>
+                                                                <div className="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" name='ExpiredORCRNoORCR' checked={this.state.ExpiredORCRNoORCR} onChange={this.checkboxChange} value={this.state.ExpiredORCRNoORCR
+                                                                        } />
+                                Expired OR CR/No OR CR
+                                        </label>
+
+                                                                </div>
+
+                                                            
+                                                                <div className="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" name='ExceedingRegisteredCapacity' checked={this.state.ExceedingRegisteredCapacity} onChange={this.checkboxChange} value={this.state.ExceedingRegisteredCapacity
+                                                                        } />
+                                Exceeding Registered Capacity
+                                        </label>
+
+                                                                </div>
+                                                                <div className="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" name='NoExpiredMTO' checked={this.state.NoExpiredMTO} onChange={this.checkboxChange} value={this.state.NoExpiredMTO
+                                                                        } />
+                                No Expired MTO
+                                        </label>
+
+                                                                </div>
+                                                                <div className="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" name='OtherTrafficViolation' checked={this.state.OtherTrafficViolation} onChange={this.checkboxChange} value={this.state.OtherTrafficViolation
+                                                                        } />
+                      Other Traffic Violation(Soliciting passenger))
+                                        </label>
+
+                                                                </div>
+
+
+                                                              
 
                                                             </div>
+
+               
                                                         </div>
 
 
@@ -408,7 +531,65 @@ class Modal extends Component {
                                         </label>
 
                                                                 </div>
+                                                                <div className="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" name='WearingOfSandoShortsSlippers' checked={this.state.WearingOfSandoShortsSlippers} onChange={this.checkboxChange} value={this.state.WearingOfSandoShortsSlippers
+                                                                        } />
+                      Wearing Of Sando/Shorts/Slippers
+                                        </label>
 
+                                                                </div>
+                                                                <div className="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" name='InvalidDL' checked={this.state.InvalidDL} onChange={this.checkboxChange} value={this.state.InvalidDL
+                                                                        } />
+                      Invalid DL
+                                        </label>
+
+                                                                </div>
+                                                                <div className="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" name='DelinquentInvalidRegistration' checked={this.state.DelinquentInvalidRegistration} onChange={this.checkboxChange} value={this.state.DelinquentInvalidRegistration
+                                                                        } />
+                     Delinquent Invalid Registration
+                                        </label>
+
+                                                                </div>
+                                                                <div className="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" name='NoCrashHelmet' checked={this.state.NoCrashHelmet} onChange={this.checkboxChange} value={this.state.NoCrashHelmet
+                                                                        } />
+                     No Crash Helmet
+                                        </label>
+
+                                                                </div>
+                                                                <div className="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" name='BackRiderNoHelmet' checked={this.state.BackRiderNoHelmet} onChange={this.checkboxChange} value={this.state.BackRiderNoHelmet
+                                                                        } />
+                     BackRider No Helmet
+                                        </label>
+
+                                                                </div>
+                                         
+                                                                <div className="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" name='FailureToCarryORCR' checked={this.state.FailureToCarryORCR} onChange={this.checkboxChange} value={this.state.FailureToCarryORCR
+                                                                        } />
+                   Failure To Carry OR CR
+                                        </label>
+
+                                                                </div>
+                                                                <div className="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" name='FailureToFastenSeatBelt' checked={this.state.FailureToFastenSeatBelt} onChange={this.checkboxChange} value={this.state.FailureToFastenSeatBelt
+                                                                        } />
+                   Failure To Fasten Seat Belt
+                                        </label>
+
+                                                                </div>
+                                                               
+            
 
 
                                                             </div>
@@ -419,25 +600,28 @@ class Modal extends Component {
 
 
                                                     </div>
-                                                    <div className="box-body" style={{ padding: '0' }}>
-                                                        <div className="form-group" style={{ display: 'flex', flexDirection: 'row', marginBottom: '0' }}>
+                                                    
+
+                                                </div>
+                                                
+
+                                            </div>
+                                            <div className="box-body" style={{ padding: '0' }}>
+                                                        <div className="form-group" style={{ display: 'flex', flexDirection: 'row', marginBottom: '0' ,alignItems:'center'}}>
                                                             <div style={{ display: 'flex', flexDirection: 'column', marginRight: '5px' }}>
                                                                 <label htmlFor="">Place of Apprehension</label>
                                                                 <input className="form-control" name='PlaceofApprehension' value={this.state.PlaceofApprehension} onChange={this.hanleInputChange} required placeholder="" />
                                                             </div>
 
-                                                            <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                                            <div style={{ display: 'flex', flexDirection: 'column',alignItems:'center' }}>
                                                                 <label htmlFor="">Date/ Time of Apprehetion</label>
 
                                                                 <div>
                                                                     <DatePicker
                                                                         selected={moment(this.state.startDate).toDate()}
                                                                         onChange={date => this.handleChange(date)}
-                                                                        showTimeSelect
-                                                                        timeFormat="HH:mm"
-                                                                        timeIntervals={15}
-                                                                        timeCaption="time"
-                                                                        dateFormat="MMMM d, yyyy h:mm aa"
+                                                                      
+                                                                        dateFormat="MMMM d, yyyy"
 
                                                                     />
                                                                 </div>
@@ -446,7 +630,7 @@ class Modal extends Component {
 
                                                             </div>
 
-                                                            <div style={{ display: 'flex', flexDirection: 'column', marginRight: '5px', }}>
+                                                            <div style={{ display: 'flex', flexDirection: 'column', marginRight: '5px',alignItems:'center' }}>
                                                                 <label htmlFor="">Remarks</label>
                                                                 <input className="form-control" name='Remarks' value={this.state.Remarks} required onChange={this.hanleInputChange} placeholder="" />
 
@@ -455,12 +639,7 @@ class Modal extends Component {
 
                                                     </div>
 
-                                                </div>
-
-                                            </div>
-
-
-                                            <div className="modal-footer" style={{ marginBottom: '5px', paddingTop: '5px' }}>
+                                            <div className="modal-footer" style={{ marginBottom: '5px', paddingTop: '5px', }}>
                                                 <button type="button" className="btn btn-default pull-left" data-dismiss="modal" onClick={() => this.props.setModal(false)}>Close</button>
                                                 <button type="submit" className="btn btn-primary">Save</button>
                                             </div>
